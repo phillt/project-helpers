@@ -5,11 +5,11 @@ Tiny library with some fun uses. Honestly, this is just my first NPM package, so
 
 ## Installation
 
-  `npm install @philll_t/project-helpers`
+  `npm install project-helpers`
 
 ## Usage
 
-    var helpers = require('@philll_t/project-helpers');
+    import {helpers, mapObj} from "project-helpers"
 
 ### Access deeply nested values from an object
 

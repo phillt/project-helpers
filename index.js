@@ -1,4 +1,4 @@
 'use strict';
-var accessDeep = require("./js/object-helpers");
+var helpers = require("./js/object-helpers");
 
-module.exports =  accessDeep;
+module.exports =  helpers;

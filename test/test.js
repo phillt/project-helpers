@@ -1,28 +1,49 @@
 'use strict';
 
-var expect = require('chai').expect;
-var accessDeep = require('../index');
+const expect = require('chai').expect;
+const helpers = require('../index');
 
+// Test access deep functionality
 describe('#accessDeep', function() {
-    var deepObject = {layer_one: {layer_two: {layer_three: { worked: "worked"}}}};
+    const deepObject = {layer_one: {layer_two: {layer_three: { worked: "worked"}}}};
 
     it('should safely access "worked" value from deeply nested object.',
         function () {
 
-            var result = accessDeep("layer_one.layer_two.layer_three.worked", deepObject);
+            const result = helpers.accessDeep("layer_one.layer_two.layer_three.worked", deepObject);
             expect(result).to.equal('worked');
         });
 
     it('should safely access "worked" value from deeply nested object using an array.',
         function () {
-            var result = accessDeep(["layer_one", "layer_two", "layer_three", "worked"], deepObject);
+            const result = helpers.accessDeep(["layer_one", "layer_two", "layer_three", "worked"], deepObject);
             expect(result).to.equal('worked');
         });
 
     it('should gracefully return null part of path is not set.',
         function () {
-            var result = accessDeep(["layer_one", "layer_two", "fail_here", "worked"], deepObject);
-            expect(result).to.equal(null);
+            const result = helpers.accessDeep(["layer_one", "layer_two", "fail_here", "worked"], deepObject);
+            expect(result).to.eql(null);
+        });
+
+});
+
+// Test map object functionality
+describe('#mapObj', function () {
+    const objectMap = {
+        one: 1,
+        two: 2,
+        three: 3
+    };
+
+    it('should iterate through the object values and return array of values',
+        function (){
+
+            let result = helpers.mapObj(objectMap, function (val) {
+                return val;
+            });
+
+            expect(result).to.eql([1, 2, 3]);
         });
 
 });

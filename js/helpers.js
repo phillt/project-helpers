@@ -1,24 +1,24 @@
 
 
 
-export function ifFunc(func, ...args){
+module.exports = function  ifFunc(func, ...args){
     if (typeof func === "function") {
         return func(...args);
     }
 }
 
-export function isUUID(uuid){
+module.exports = function  isUUID(uuid){
     const uuidRegEx = new RegExp(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/, 'i');
     return uuidRegEx.test(uuid);
 }
 
-export function parseCammelCase(string) {
+module.exports = function  parseCammelCase(string) {
     return string
         .replace(/([A-Z])/g, ' $1')
         .replace(/^./, function(str){ return str.toUpperCase(); })
 }
 
-export function arrayChunks(arr, len){ __ENFORCETYPE(arguments, "array", "number");
+module.exports = function  arrayChunks(arr, len){ __ENFORCETYPE(arguments, "array", "number");
     let chunks = [],
         i = 0,
         n = arr.length;
@@ -31,7 +31,7 @@ export function arrayChunks(arr, len){ __ENFORCETYPE(arguments, "array", "number
 }
 
 
-export function objectToProps(object, keys = false) {
+module.exports = function  objectToProps(object, keys = false) {
     if (keys === false) {
         return Component => <Component {...object} />
     }
@@ -42,7 +42,7 @@ export function objectToProps(object, keys = false) {
     return Component => <Component {...flattened} />
 }
 
-export function clipText(text, characterLength) {
+module.exports = function  clipText(text, characterLength) {
     if (text.length <= characterLength) {
         return text;
     }
@@ -89,7 +89,7 @@ function mergeDeep(target, ...sources) {
  * @param {object} m - The moment object of the date to evaluate.
  * @return {string} Time of day.
  */
- export function getGreetingTime (m) {
+ module.exports = function  getGreetingTime (m) {
     if (!m || !m.isValid()) { return ''; } //if we can't find a valid or filled moment, we return.
     return parseFloat(m.format("HH")) >= 12 /* 24hr time to split the afternoon */ ? 'afternoon' : 'morning';
  }
@@ -104,7 +104,7 @@ function mergeDeep(target, ...sources) {
  * @return {string} Returns a string with the appropriate string representing
  * the time lapsed based on the hierarchy variable.
  */
-export function timeSince(targetDate, startDate = moment(), hierarchy = ['years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']) {
+module.exports = function  timeSince(targetDate, startDate = moment(), hierarchy = ['years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']) {
     let date = hierarchy.find(item => (moment(startDate).diff(targetDate, item)));
     const timeSince = moment(startDate).diff(targetDate, date);
 
@@ -117,11 +117,11 @@ export function timeSince(targetDate, startDate = moment(), hierarchy = ['years'
     return `${timeSince} ${date}`;
 }
 
-export function toPercent(partial, whole) {
+module.exports = function  toPercent(partial, whole) {
     return partial*100/whole;
 }
 
-export function calculateDiscountAsAPercentage(x, y) { __ENFORCETYPE(arguments, 'number', 'number');
+module.exports = function  calculateDiscountAsAPercentage(x, y) { __ENFORCETYPE(arguments, 'number', 'number');
     return !y ? null : (((1 - (x / y))) * 100).toFixed(3);
 }
 /**
@@ -134,7 +134,7 @@ export function calculateDiscountAsAPercentage(x, y) { __ENFORCETYPE(arguments, 
  * @param {array} path             - The array representation of the path to the delimiter.
  * @return {object} Returns an object where each value is an array of the sorted items.
  */
-export function sortObjectsByProperty(array_of_objects, path) { __ENFORCETYPE(arguments, "array", "array");
+module.exports = function  sortObjectsByProperty(array_of_objects, path) { __ENFORCETYPE(arguments, "array", "array");
     let sorted = {};
 
     array_of_objects.map( item => {
@@ -158,13 +158,13 @@ export function sortObjectsByProperty(array_of_objects, path) { __ENFORCETYPE(ar
 
 // Adds leading zeros where size of the number is the exptected length of the number
 // anything empty will be replaced with 0s
-export function leadingZeros(num, size) {
+module.exports = function  leadingZeros(num, size) {
     var s = num+"";
     while (s.length < size) s = "0" + s;
     return s;
 }
 
-export function decodeHtml(html) {
+module.exports = function  decodeHtml(html) {
     var txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;
@@ -180,7 +180,7 @@ export function decodeHtml(html) {
  * @param d, string, character to use where decimal is supposed to go (optional, default is ".")
  * @param t, string, character to use where commas are supposed to go (optional, default is "," use "" to have no commas)
  */
-export function formatCurrency(n, c = 2, d = ".", t = ","){
+module.exports = function  formatCurrency(n, c = 2, d = ".", t = ","){
     // Negative prefix
     let num = (Number(n) / 100).toFixed(c);
     let numArray = num.toString().split(".");
@@ -246,7 +246,7 @@ function findObj (obj, callback) { __ENFORCETYPE(arguments, 'object', 'function'
      return objArray;
  }
 
-export function filterObj (obj, predicate) {
+module.exports = function  filterObj (obj, predicate) {
     let newObj = {};
     let objArray = Object.keys(obj);
     objArray.forEach((item, k) => {
@@ -274,7 +274,7 @@ function ripArray (array1, array2) {
      return text;
  }
 
- export function chainPromises (promises, thisUpdate = () => {})  {
+ module.exports = function  chainPromises (promises, thisUpdate = () => {})  {
     // If there's only one promise just do it and get it over with already.
     if(promises.length == 1) {
         return promises[0]();
@@ -308,14 +308,14 @@ function ripArray (array1, array2) {
     return chainedPromises;
  }
 
- export function getHashParams (ignore = 0) {
+ module.exports = function  getHashParams (ignore = 0) {
      const locationHash =  window.location.hash
      let locationSplit = locationHash.split("/");
      locationSplit.splice(0, ignore);
      return locationSplit.map(item => decodeURI(item));
  }
 // Compares two objects
- export function isEquivalent(a, b) {
+ module.exports = function  isEquivalent(a, b) {
     // Create arrays of property names
     var aProps = Object.getOwnPropertyNames(a);
     var bProps = Object.getOwnPropertyNames(b);
@@ -419,7 +419,7 @@ function ripArray (array1, array2) {
  * @param {!mixed} value - The value you want to set it to.
  * @param {boolean} setrecursively - If true, will set value of non-existing path as well.
  */
-export function setDeep(obj, path, value, setrecursively = false) {
+module.exports = function  setDeep(obj, path, value, setrecursively = false) {
     let level = 0;
 
     if (typeof path === "string") {

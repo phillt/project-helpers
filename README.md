@@ -11,7 +11,7 @@ Tiny library with some fun uses. Honestly, this is just my first NPM package, so
 
     var helpers = require('@philll_t/project-helpers');
 
-#### Access deeply nested values from an object
+### Access deeply nested values from an object
 
 Sometimes we just need to reach a bit deeper than we'd like but are unsure if the pathway is even set.
 
@@ -24,7 +24,7 @@ Use this method to safely access deeply nested values.
   
   `result` should be `"worked"`
 
-#### Map an object like you would an array
+### Map an object like you would an array
 
 Do you need to iterate through an object's values? Here you go. You're welcome:
 

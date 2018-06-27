@@ -9,7 +9,7 @@ Tiny library with some fun uses. Honestly, this is just my first NPM package, so
 
 ## Usage
 
-    import {helpers, mapObj} from "project-helpers"
+    import {helpers, mapObj, setDeep} from "project-helpers"
 
 ### Access deeply nested values from an object
 
@@ -19,7 +19,7 @@ Use this method to safely access deeply nested values.
 
     const deepObject = {layer_one: {layer_two: {layer_three: { worked: "worked"}}}};
     
-    const result = helpers.accessDeep("layer_one.layer_two.layer_three.worked", deepObject);
+    const result = accessDeep("layer_one.layer_two.layer_three.worked", deepObject);
   
   
   `result` should be `"worked"`
@@ -34,11 +34,26 @@ Do you need to iterate through an object's values? Here you go. You're welcome:
             three: 3
         };
         
-    const result = helpers.mapObj(objectMap, function (val) {
+    const result = mapObj(objectMap, function (val) {
                     return val;
                 });
 
   `result` should be `[1, 2, 3]`
+  
+### Deeply set a value of an object.
+
+If you need to deeply set a value of an object, we can do so using the setDeep method. This will create the path even
+though it's not already set.
+
+    let myObject = {};
+    
+    helpers.setDeep(myObject, "set.deeply.nested.values", "myValue");
+    
+    // myObject.set.deeply.nested.values = "myValue";
+    
+    // Now it should look like this:
+    myObject = { set: { deeply: { nested: { values: "myValue" }}}};
+
 ## Tests
 
   `npm test`

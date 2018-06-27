@@ -47,3 +47,22 @@ describe('#mapObj', function () {
         });
 
 });
+
+// Test setDeepObject
+
+describe('#setDeep', function () {
+    let plainObject = {};
+
+    it('should set a deeply nested value into a plain object using an array path.', function () {
+        helpers.setDeep(plainObject, ["set", "deep", "value", "withArray"], "yes", true);
+
+        expect(plainObject.set.deep.value.withArray).to.equal("yes");
+    });
+
+    it("should set a deeply nested value into a plain object using a string path.", function () {
+        helpers.setDeep(plainObject, "set.deep.value.withString", "yes", true);
+
+        expect(plainObject.set.deep.value.withString).to.equal("yes");
+    });
+
+});

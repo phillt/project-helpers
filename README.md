@@ -9,7 +9,7 @@ Tiny library with some fun uses. Honestly, this is just my first NPM package, so
 
 ## Usage
 
-    import {helpers, mapObj, setDeep} from "project-helpers"
+    import {helpers, mapObj, setDeep, ifFunc} from "project-helpers"
 
 ### Access deeply nested values from an object
 
@@ -53,6 +53,26 @@ though it's not already set.
     
     // Now it should look like this:
     myObject = { set: { deeply: { nested: { values: "myValue" }}}};
+    
+### Call a function if it's a function
+
+Sometimes in projects we need to call functions if they are indeed functions. For example, in a React project
+sometimes we have props that are optional. These props can contain functions. If that is indeed the case,
+we would end up writing something like this:
+
+    if (typeof myfunc === "function") {
+        myfunc(...)
+    } 
+
+Well, we think even the one-liner solution of this sucks. So we created better:
+
+    const myFunction = function (a, b) {
+        return a + b;
+    }
+
+    ifFunc(myFunction, 1, 2) // should return 3;
+    
+This will gracefully fail if the function is not set.
 
 ## Tests
 

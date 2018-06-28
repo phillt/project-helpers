@@ -42,3 +42,10 @@ exports.setDeep = function  (obj, path, value, setrecursively = false) {
     }, obj);
     return obj;
 };
+
+
+exports.ifFunc = function  (func, ...args){
+    if (typeof func === "function") {
+        return func(...args);
+    }
+};

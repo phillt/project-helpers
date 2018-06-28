@@ -66,3 +66,21 @@ describe('#setDeep', function () {
     });
 
 });
+
+describe('#ifFunc', function () {
+    const testFunc = function(a, b) {
+        return a + b ;
+    };
+
+    let fakeFunc;
+
+    it('Call a function if it is an actual function.', function () {
+        const result = helpers.ifFunc(testFunc, 1, 2);
+        expect(result).to.equal(3);
+    });
+
+    it('Should gracefully fail if the reference is not a function.', function () {
+        const result = helpers.ifFunc(fakeFunc, 1, 2);
+        expect(result).to.equal(undefined);
+    });
+});

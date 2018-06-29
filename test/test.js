@@ -84,3 +84,19 @@ describe('#ifFunc', function () {
         expect(result).to.equal(undefined);
     });
 });
+
+describe("#arrayChuncks", function () {
+    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const expectedArray = [[1,2,3], [4, 5, 6], [7, 8, 9]];
+    const expectedBArray = [[1,2,3, 4], [5, 6, 7, 8], [9]];
+
+    it('Should create an array of chunks that is identical as the expectedArray', function () {
+        const result = helpers.arrayChunks(testArray, 3);
+        expect(result).to.eql(expectedArray);
+    });
+
+    it('Should create an array of chunks that is identical as the expectedBArray', function () {
+        const result = helpers.arrayChunks(testArray, 4);
+        expect(result).to.eql(expectedBArray);
+    });
+});

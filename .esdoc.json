@@ -11,6 +11,15 @@
           "interfaces": ["describe", "it", "context", "suite", "test"],
           "includes": ["(spec|Spec|test|Test)\\.js$"],
           "excludes": ["\\.config\\.js$"]
+        },
+        "brand": {
+          "logo": "./img/logo.png",
+          "title": "Project Helpers",
+          "description": "A small library of helper functions that I keep using and so you probably will too.",
+          "repository": "https://github.com/phillt/project-helpers",
+          "site": "https://phillt.github.io/project-helpers/",
+          "author": "http://felipetadeo.com",
+          "image": "./img/logo.png"
         }
       }
     }

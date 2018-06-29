@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/phillt/project-helpers/issues"
   },
-  "homepage": "https://github.com/phillt/project-helpers#readme",
+  "homepage": "https://phillt.github.io/project-helpers/",
   "dependencies": {
     "esdoc-node": "^1.0.3",
     "react": "^16.4.1"

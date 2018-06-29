@@ -137,6 +137,15 @@ exports.ifFunc = function  (func, ...args){
     }
 };
 
+/**
+ * @function arrayChunks
+ *
+ * Group an array&apos;s values into subgroups.
+ *
+ * @param {array} arr - The target array.
+ * @param {number} len - The length of the chunks.
+ * @returns {array} A two-dimensional segmented array.
+ */
 exports.arrayChunks = function (arr, len){
     let chunks = [],
         i = 0,

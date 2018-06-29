@@ -9,7 +9,20 @@ Tiny library with some fun uses. Honestly, this is just my first NPM package, so
 
 ## Usage
 
-    import {helpers, mapObj, setDeep, ifFunc} from "project-helpers"
+    import {helpers, mapObj, setDeep, ifFunc, arrayChunks} from "project-helpers"
+
+### Group an array into chunks of arrays.
+
+This method is good for creating grids and any other things that require an array to be sorted
+into chunks.
+
+    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
+    const resulta = arrayChunks(testArray, 3);
+    const resultb = arrayChunks(testArray, 4);
+    
+    // resulta is: [[1,2,3], [4, 5, 6], [7, 8, 9]]
+    // resultb is: [[1,2,3, 4], [5, 6, 7, 8], [9]]
 
 ### Access deeply nested values from an object
 

@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "js/object-helpers.js",
-    "content": "\n/**\n * @function accessDeep\n *\n * Safely access deeply nested values in an object. If the path to the\n * value is not valid, the method will gracefully return null.\n *\n * @param {array} path - the array representation of the path to access.\n * @param {object} obj - the object who's value you are trying to access.\n *\n * @return {null | any} will return null on path not found, or the value found.\n */\nexports.accessDeep =  function  (path, obj) {\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);\n};\n\n\n/**\n * @function mapObj\n *\n * The mapObj() method creates a new array with the results of calling a provided function on\n * every element in the calling object.\n *\n * @param {object} obj - The object to map.\n * @param {function} callback - The function to call per iterated value.\n * @returns {array} returns an array with the values of each returned value in the callback.\n */\nexports.mapObj = function  (obj, callback) {\n    return Object.keys(obj).map(function (key) {\n        const returning = callback(obj[key], key);\n        if(returning !== false){\n            return returning;\n        }\n    });\n};\n/**\n * Callback for mapObj\n *\n * The result of this will be added to the array.\n *\n * @callback mapObj\n * @param {any} arg[1] - The value of the current object value being iterated through.\n * @param {string} arg[2] - The key of the current object value being iterated through.\n */\n\n\nexports.setDeep = function  (obj, path, value, setrecursively = false) {\n    let level = 0;\n\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    level = 0;\n\n    path.reduce((a, b)=>{\n        level++;\n\n        if (setrecursively && typeof a[b] === \"undefined\" && level !== path.length){\n            a[b] = {};\n            return a[b];\n        }\n\n        if (level === path.length){\n            a[b] = value;\n            return value;\n        } else {\n            return a[b];\n        }\n    }, obj);\n    return obj;\n};\n\n\nexports.ifFunc = function  (func, ...args){\n    if (typeof func === \"function\") {\n        return func(...args);\n    }\n};\n\nexports.arrayChunks = function (arr, len){\n    let chunks = [],\n        i = 0,\n        n = arr.length;\n\n    while (i < n) {\n        chunks.push(arr.slice(i, i += len));\n    }\n\n    return chunks;\n};",
+    "content": "\n/**\n * @function accessDeep\n *\n * Safely access deeply nested values in an object. If the path to the\n * value is not valid, the method will gracefully return null.\n *\n * @param {array} path - the array representation of the path to access.\n * @param {object} obj - the object who's value you are trying to access.\n *\n * @return {null | any} will return null on path not found, or the value found.\n */\nexports.accessDeep =  function  (path, obj) {\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);\n};\n\n\n/**\n * @function mapObj\n *\n * The mapObj() method creates a new array with the results of calling a provided function on\n * every element in the calling object.\n *\n * @param {object} obj - The object to map.\n * @param {function} callback - The function to call per iterated value.\n * @returns {array} returns an array with the values of each returned value in the callback.\n */\nexports.mapObj = function  (obj, callback) {\n    return Object.keys(obj).map(function (key) {\n        const returning = callback(obj[key], key);\n        if(returning !== false){\n            return returning;\n        }\n    });\n};\n/**\n * Callback for mapObj\n *\n * The result of this will be added to the array.\n *\n * @callback mapObj\n * @param {any} arg[1] - The value of the current object value being iterated through.\n * @param {string} arg[2] - The key of the current object value being iterated through.\n */\n\n/**\n * Deeply nest and set a value in an object.\n *\n * @param {object} obj - The target object\n * @param {array | string } path - The path where the value should be nested and set.\n * @param {any} value - The value to set\n * @param {boolean} setRecursively - Should create path if the path does not exist.\n * @returns {object} Returns the new object for reference purposes.\n */\nexports.setDeep = function  (obj, path, value, setRecursively = false) {\n    let level = 0;\n\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    level = 0;\n\n    path.reduce((a, b)=>{\n        level++;\n\n        if (setRecursively && typeof a[b] === \"undefined\" && level !== path.length){\n            a[b] = {};\n            return a[b];\n        }\n\n        if (level === path.length){\n            a[b] = value;\n            return value;\n        } else {\n            return a[b];\n        }\n    }, obj);\n    return obj;\n};\n\n/**\n * Quickly call a function or fail gracefully if it does not exist.\n *\n * @param {function} func - The function to try to call.\n * @param {args} args - The would-be arguments of the function.\n * @returns {any} returns whatever the function returns.\n */\nexports.ifFunc = function  (func, ...args){\n    if (typeof func === \"function\") {\n        return func(...args);\n    }\n};\n\nexports.arrayChunks = function (arr, len){\n    let chunks = [],\n        i = 0,\n        n = arr.length;\n\n    while (i < n) {\n        chunks.push(arr.slice(i, i += len));\n    }\n\n    return chunks;\n};",
     "static": true,
     "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/js/object-helpers.js",
     "access": "public",
@@ -696,15 +696,36 @@
     "export": true,
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{setDeep}",
-    "description": "Callback for mapObj\n\nThe result of this will be added to the array.",
-    "lineNumber": 51,
+    "description": "Deeply nest and set a value in an object.",
+    "lineNumber": 59,
     "unknown": [
       {
-        "tagName": "@callback",
-        "tagValue": "mapObj"
+        "tagName": "@returns",
+        "tagValue": "{object} Returns the new object for reference purposes."
       }
     ],
     "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "The target object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "array ",
+          " string "
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "The path where the value should be nested and set."
+      },
       {
         "nullable": null,
         "types": [
@@ -712,24 +733,27 @@
         ],
         "spread": false,
         "optional": false,
-        "name": "arg[1]",
-        "description": "The value of the current object value being iterated through."
+        "name": "value",
+        "description": "The value to set"
       },
       {
         "nullable": null,
         "types": [
-          "string"
+          "boolean"
         ],
         "spread": false,
         "optional": false,
-        "name": "arg[2]",
-        "description": "The key of the current object value being iterated through."
+        "name": "setRecursively",
+        "description": "Should create path if the path does not exist."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "object"
+      ],
+      "spread": false,
+      "description": "Returns the new object for reference purposes."
     }
   },
   {
@@ -745,28 +769,43 @@
     "export": true,
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{ifFunc}",
-    "description": null,
-    "lineNumber": 79,
-    "undocument": true,
+    "description": "Quickly call a function or fail gracefully if it does not exist.",
+    "lineNumber": 93,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{any} returns whatever the function returns."
+      }
+    ],
     "params": [
       {
-        "name": "func",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "The function to try to call."
       },
       {
-        "name": "args",
+        "nullable": null,
         "types": [
-          "...*"
+          "args"
         ],
-        "spread": true
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "The would-be arguments of the function."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "any"
+      ],
+      "spread": false,
+      "description": "returns whatever the function returns."
     }
   },
   {
@@ -783,7 +822,7 @@
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{arrayChunks}",
     "description": null,
-    "lineNumber": 85,
+    "lineNumber": 99,
     "undocument": true,
     "params": [
       {

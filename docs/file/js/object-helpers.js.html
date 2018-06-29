@@ -88,8 +88,16 @@ exports.mapObj = function  (obj, callback) {
  * @param {string} arg[2] - The key of the current object value being iterated through.
  */
 
-
-exports.setDeep = function  (obj, path, value, setrecursively = false) {
+/**
+ * Deeply nest and set a value in an object.
+ *
+ * @param {object} obj - The target object
+ * @param {array | string } path - The path where the value should be nested and set.
+ * @param {any} value - The value to set
+ * @param {boolean} setRecursively - Should create path if the path does not exist.
+ * @returns {object} Returns the new object for reference purposes.
+ */
+exports.setDeep = function  (obj, path, value, setRecursively = false) {
     let level = 0;
 
     if (typeof path === &quot;string&quot;) {
@@ -101,7 +109,7 @@ exports.setDeep = function  (obj, path, value, setrecursively = false) {
     path.reduce((a, b)=&gt;{
         level++;
 
-        if (setrecursively &amp;&amp; typeof a[b] === &quot;undefined&quot; &amp;&amp; level !== path.length){
+        if (setRecursively &amp;&amp; typeof a[b] === &quot;undefined&quot; &amp;&amp; level !== path.length){
             a[b] = {};
             return a[b];
         }
@@ -116,7 +124,13 @@ exports.setDeep = function  (obj, path, value, setrecursively = false) {
     return obj;
 };
 
-
+/**
+ * Quickly call a function or fail gracefully if it does not exist.
+ *
+ * @param {function} func - The function to try to call.
+ * @param {args} args - The would-be arguments of the function.
+ * @returns {any} returns whatever the function returns.
+ */
 exports.ifFunc = function  (func, ...args){
     if (typeof func === &quot;function&quot;) {
         return func(...args);

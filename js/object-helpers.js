@@ -83,7 +83,13 @@ exports.setDeep = function  (obj, path, value, setRecursively = false) {
     return obj;
 };
 
-
+/**
+ * Quickly call a function or fail gracefully if it does not exist.
+ *
+ * @param {function} func - The function to try to call.
+ * @param {args} args - The would-be arguments of the function.
+ * @returns {any} returns whatever the function returns.
+ */
 exports.ifFunc = function  (func, ...args){
     if (typeof func === "function") {
         return func(...args);

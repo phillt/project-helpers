@@ -113,13 +113,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-ifFunc">ifFunc</a></span></span><span class="code" data-ice="signature">(func: <span>*</span>, args: ...<span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-ifFunc">ifFunc</a></span></span><span class="code" data-ice="signature">(func: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, args: <span>args</span>): <span>any</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Quickly call a function or fail gracefully if it does not exist.</p>
+</div>
       </div>
     </td>
     <td>
@@ -169,13 +170,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-setDeep">setDeep</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-setDeep">setDeep</a></span></span><span class="code" data-ice="signature">(obj: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>, path: <span>array </span> | <span> string </span>, value: <span>any</span>, setRecursively: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Callback for mapObj</p>
+        <div data-ice="description"><p>Deeply nest and set a value in an object.</p>
 </div>
       </div>
     </td>
@@ -281,11 +282,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber85">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber99">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {arrayChunks} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber85">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {arrayChunks} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber99">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -354,18 +355,19 @@
     
     
     
-    <span class="code" data-ice="name">ifFunc</span><span class="code" data-ice="signature">(func: <span>*</span>, args: ...<span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">ifFunc</span><span class="code" data-ice="signature">(func: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>, args: <span>args</span>): <span>any</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber79">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber93">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ifFunc} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber79">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ifFunc} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber93">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Quickly call a function or fail gracefully if it does not exist.</p>
+</div>
 
   
 
@@ -379,15 +381,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">func</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The function to try to call.</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">args</td>
-      <td data-ice="type" class="code">...<span>*</span></td>
+      <td data-ice="type" class="code"><span>args</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The would-be arguments of the function.</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -399,8 +403,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span>any</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns whatever the function returns.</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -511,19 +516,18 @@
     
     
     
-    <span class="code" data-ice="name">setDeep</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">setDeep</span><span class="code" data-ice="signature">(obj: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>, path: <span>array </span> | <span> string </span>, value: <span>any</span>, setRecursively: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber51">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber59">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {setDeep} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber51">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {setDeep} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber59">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Callback for mapObj</p>
-<p>The result of this will be added to the array.</p>
+  <div data-ice="description"><p>Deeply nest and set a value in an object.</p>
 </div>
 
   
@@ -537,17 +541,31 @@
     <tbody>
     
     <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">arg[1]</td>
-      <td data-ice="type" class="code"><span>any</span></td>
+      <td data-ice="name" class="code" data-depth="0">obj</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The value of the current object value being iterated through.</p>
+      <td data-ice="description"><p>The target object</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">arg[2]</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="name" class="code" data-depth="0">path</td>
+      <td data-ice="type" class="code"><span>array </span> | <span> string </span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The key of the current object value being iterated through.</p>
+      <td data-ice="description"><p>The path where the value should be nested and set.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">value</td>
+      <td data-ice="type" class="code"><span>any</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The value to set</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">setRecursively</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Should create path if the path does not exist.</p>
 </td>
     </tr>
 </tbody>
@@ -560,8 +578,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Returns the new object for reference purposes.</p>
+</td>
         </tr>
       </tbody>
     </table>

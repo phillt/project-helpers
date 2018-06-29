@@ -1,16 +1,14 @@
 {
-  "coverage": "20%",
+  "coverage": "60%",
   "expectCount": 5,
-  "actualCount": 1,
+  "actualCount": 3,
   "files": {
     "js/object-helpers.js": {
       "expectCount": 5,
-      "actualCount": 1,
+      "actualCount": 3,
       "undocumentLines": [
-        21,
-        30,
-        58,
-        64
+        79,
+        85
       ]
     }
   }

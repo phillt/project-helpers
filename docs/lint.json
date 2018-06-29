@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "name": "setDeep",
+    "filePath": "js/object-helpers.js",
+    "lines": [
+      {
+        "lineNumber": 39,
+        "line": "/**"
+      },
+      {
+        "lineNumber": 40,
+        "line": " * Callback for mapObj"
+      },
+      {
+        "lineNumber": 41,
+        "line": " *"
+      },
+      {
+        "lineNumber": 42,
+        "line": " * The result of this will be added to the array."
+      },
+      {
+        "lineNumber": 43,
+        "line": " *"
+      },
+      {
+        "lineNumber": 44,
+        "line": " * @callback mapObj"
+      },
+      {
+        "lineNumber": 45,
+        "line": " * @param {any} arg[1] - The value of the current object value being iterated through."
+      },
+      {
+        "lineNumber": 46,
+        "line": " * @param {string} arg[2] - The key of the current object value being iterated through."
+      },
+      {
+        "lineNumber": 47,
+        "line": " */"
+      },
+      {
+        "lineNumber": 48,
+        "line": ""
+      },
+      {
+        "lineNumber": 49,
+        "line": ""
+      },
+      {
+        "lineNumber": 50,
+        "line": "exports.setDeep = function  (obj, path, value, setrecursively = false) {"
+      }
+    ],
+    "codeParams": [
+      "obj",
+      "path",
+      "value",
+      "setrecursively"
+    ],
+    "docParams": []
+  }
+]

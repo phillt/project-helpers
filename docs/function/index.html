@@ -141,7 +141,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-mapObj">mapObj</a></span></span><span class="code" data-ice="signature">(obj: <span>*</span>, callback: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-mapObj">mapObj</a></span></span><span class="code" data-ice="signature">(obj: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>): <span>array</span></span>
         </p>
       </div>
       <div>
@@ -169,13 +169,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-setDeep">setDeep</a></span></span><span class="code" data-ice="signature">(obj: <span>*</span>, path: <span>*</span>, value: <span>*</span>, setrecursively: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-setDeep">setDeep</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Callback for mapObj</p>
+</div>
       </div>
     </td>
     <td>
@@ -280,11 +281,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber64">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber85">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {arrayChunks} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber64">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {arrayChunks} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber85">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -357,11 +358,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber58">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber79">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ifFunc} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber58">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ifFunc} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber79">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -430,15 +431,15 @@
     
     
     
-    <span class="code" data-ice="name">mapObj</span><span class="code" data-ice="signature">(obj: <span>*</span>, callback: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">mapObj</span><span class="code" data-ice="signature">(obj: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>, callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>): <span>array</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {mapObj} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber21">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {mapObj} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber32">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -455,15 +456,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">obj</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The object to map.</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The function to call per iterated value.</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -475,8 +478,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span>array</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>returns an array with the values of each returned value in the callback.</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -507,18 +511,20 @@
     
     
     
-    <span class="code" data-ice="name">setDeep</span><span class="code" data-ice="signature">(obj: <span>*</span>, path: <span>*</span>, value: <span>*</span>, setrecursively: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">setDeep</span><span class="code" data-ice="signature">(): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber30">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/object-helpers.js.html#lineNumber51">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {setDeep} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber30">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {setDeep} from &apos;<span><a href="file/js/object-helpers.js.html#lineNumber51">project-helpers/js/object-helpers.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Callback for mapObj</p>
+<p>The result of this will be added to the array.</p>
+</div>
 
   
 
@@ -531,29 +537,18 @@
     <tbody>
     
     <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">obj</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="name" class="code" data-depth="0">arg[1]</td>
+      <td data-ice="type" class="code"><span>any</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The value of the current object value being iterated through.</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">path</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="name" class="code" data-depth="0">arg[2]</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">value</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">setrecursively</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: false</li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The key of the current object value being iterated through.</p>
+</td>
     </tr>
 </tbody>
   </table>

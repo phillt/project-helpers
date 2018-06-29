@@ -18,6 +18,17 @@ exports.accessDeep =  function  (path, obj) {
     return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);
 };
 
+
+/**
+ * @function mapObj
+ *
+ * The mapObj() method creates a new array with the results of calling a provided function on
+ * every element in the calling object.
+ *
+ * @param {object} obj - The object to map.
+ * @param {function} callback - The function to call per iterated value.
+ * @returns {array} returns an array with the values of each returned value in the callback.
+ */
 exports.mapObj = function  (obj, callback) {
     return Object.keys(obj).map(function (key) {
         const returning = callback(obj[key], key);
@@ -26,8 +37,26 @@ exports.mapObj = function  (obj, callback) {
         }
     });
 };
+/**
+ * Callback for mapObj
+ *
+ * The result of this will be added to the array.
+ *
+ * @callback mapObj
+ * @param {any} arg[1] - The value of the current object value being iterated through.
+ * @param {string} arg[2] - The key of the current object value being iterated through.
+ */
 
-exports.setDeep = function  (obj, path, value, setrecursively = false) {
+/**
+ * Deeply nest and set a value in an object.
+ *
+ * @param {object} obj - The target object
+ * @param {array | string } path - The path where the value should be nested and set.
+ * @param {any} value - The value to set
+ * @param {boolean} setRecursively - Should create path if the path does not exist.
+ * @returns {object} Returns the new object for reference purposes.
+ */
+exports.setDeep = function  (obj, path, value, setRecursively = false) {
     let level = 0;
 
     if (typeof path === "string") {
@@ -39,7 +68,7 @@ exports.setDeep = function  (obj, path, value, setrecursively = false) {
     path.reduce((a, b)=>{
         level++;
 
-        if (setrecursively && typeof a[b] === "undefined" && level !== path.length){
+        if (setRecursively && typeof a[b] === "undefined" && level !== path.length){
             a[b] = {};
             return a[b];
         }

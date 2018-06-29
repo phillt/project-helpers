@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">test/test.js | project-helpers</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/phillt/project-helpers"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  </ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">test/test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
+
+const expect = require(&apos;chai&apos;).expect;
+const helpers = require(&apos;../index&apos;);
+
+// Test access deep functionality
+describe(&apos;#accessDeep&apos;, function() {
+    const deepObject = {layer_one: {layer_two: {layer_three: { worked: &quot;worked&quot;}}}};
+
+    it(&apos;should safely access &quot;worked&quot; value from deeply nested object.&apos;,
+        function () {
+
+            const result = helpers.accessDeep(&quot;layer_one.layer_two.layer_three.worked&quot;, deepObject);
+            expect(result).to.equal(&apos;worked&apos;);
+        });
+
+    it(&apos;should safely access &quot;worked&quot; value from deeply nested object using an array.&apos;,
+        function () {
+            const result = helpers.accessDeep([&quot;layer_one&quot;, &quot;layer_two&quot;, &quot;layer_three&quot;, &quot;worked&quot;], deepObject);
+            expect(result).to.equal(&apos;worked&apos;);
+        });
+
+    it(&apos;should gracefully return null part of path is not set.&apos;,
+        function () {
+            const result = helpers.accessDeep([&quot;layer_one&quot;, &quot;layer_two&quot;, &quot;fail_here&quot;, &quot;worked&quot;], deepObject);
+            expect(result).to.eql(null);
+        });
+
+});
+
+// Test map object functionality
+describe(&apos;#mapObj&apos;, function () {
+    const objectMap = {
+        one: 1,
+        two: 2,
+        three: 3
+    };
+
+    it(&apos;should iterate through the object values and return array of values&apos;,
+        function (){
+
+            let result = helpers.mapObj(objectMap, function (val) {
+                return val;
+            });
+
+            expect(result).to.eql([1, 2, 3]);
+        });
+
+});
+
+// Test setDeepObject
+
+describe(&apos;#setDeep&apos;, function () {
+    let plainObject = {};
+
+    it(&apos;should set a deeply nested value into a plain object using an array path.&apos;, function () {
+        helpers.setDeep(plainObject, [&quot;set&quot;, &quot;deep&quot;, &quot;value&quot;, &quot;withArray&quot;], &quot;yes&quot;, true);
+
+        expect(plainObject.set.deep.value.withArray).to.equal(&quot;yes&quot;);
+    });
+
+    it(&quot;should set a deeply nested value into a plain object using a string path.&quot;, function () {
+        helpers.setDeep(plainObject, &quot;set.deep.value.withString&quot;, &quot;yes&quot;, true);
+
+        expect(plainObject.set.deep.value.withString).to.equal(&quot;yes&quot;);
+    });
+
+});
+
+describe(&apos;#ifFunc&apos;, function () {
+    const testFunc = function(a, b) {
+        return a + b ;
+    };
+
+    let fakeFunc;
+
+    it(&apos;Call a function if it is an actual function.&apos;, function () {
+        const result = helpers.ifFunc(testFunc, 1, 2);
+        expect(result).to.equal(3);
+    });
+
+    it(&apos;Should gracefully fail if the reference is not a function.&apos;, function () {
+        const result = helpers.ifFunc(fakeFunc, 1, 2);
+        expect(result).to.equal(undefined);
+    });
+});
+
+describe(&quot;#arrayChuncks&quot;, function () {
+    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const expectedArray = [[1,2,3], [4, 5, 6], [7, 8, 9]];
+    const expectedBArray = [[1,2,3, 4], [5, 6, 7, 8], [9]];
+
+    it(&apos;Should create an array of chunks that is identical as the expectedArray&apos;, function () {
+        const result = helpers.arrayChunks(testArray, 3);
+        expect(result).to.eql(expectedArray);
+    });
+
+    it(&apos;Should create an array of chunks that is identical as the expectedBArray&apos;, function () {
+        const result = helpers.arrayChunks(testArray, 4);
+        expect(result).to.eql(expectedBArray);
+    });
+});</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

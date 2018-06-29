@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | project-helpers</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/phillt/project-helpers"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-accessDeep">accessDeep</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-arrayChunks">arrayChunks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ifFunc">ifFunc</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-mapObj">mapObj</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setDeep">setDeep</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="project-helpers">Project Helpers</h1><p>Tiny library with some fun uses. Honestly, this is just my first NPM package, so more of a test for me really. But everything should work fine.</p>
+<h2 id="installation">Installation</h2><p>  <code>npm install project-helpers</code></p>
+<h2 id="usage">Usage</h2><pre><code><code class="source-code prettyprint">import {helpers, mapObj, setDeep, ifFunc, arrayChunks} from &quot;project-helpers&quot;</code>
+</code></pre><h3 id="group-an-array-into-chunks-of-arrays-">Group an array into chunks of arrays.</h3><p>This method is good for creating grids and any other things that require an array to be sorted
+into chunks.</p>
+<pre><code><code class="source-code prettyprint">const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const resulta = arrayChunks(testArray, 3);
+const resultb = arrayChunks(testArray, 4);
+
+// resulta is: [[1,2,3], [4, 5, 6], [7, 8, 9]]
+// resultb is: [[1,2,3, 4], [5, 6, 7, 8], [9]]</code>
+</code></pre><h3 id="access-deeply-nested-values-from-an-object">Access deeply nested values from an object</h3><p>Sometimes we just need to reach a bit deeper than we&apos;d like but are unsure if the pathway is even set.</p>
+<p>Use this method to safely access deeply nested values.</p>
+<pre><code><code class="source-code prettyprint">const deepObject = {layer_one: {layer_two: {layer_three: { worked: &quot;worked&quot;}}}};
+
+const result = accessDeep(&quot;layer_one.layer_two.layer_three.worked&quot;, deepObject);</code>
+</code></pre><p>  <code>result</code> should be <code>&quot;worked&quot;</code></p>
+<h3 id="map-an-object-like-you-would-an-array">Map an object like you would an array</h3><p>Do you need to iterate through an object&apos;s values? Here you go. You&apos;re welcome:</p>
+<pre><code><code class="source-code prettyprint">const objectMap = {
+        one: 1,
+        two: 2,
+        three: 3
+    };
+
+const result = mapObj(objectMap, function (val) {
+                return val;
+            });</code>
+</code></pre><p>  <code>result</code> should be <code>[1, 2, 3]</code></p>
+<h3 id="deeply-set-a-value-of-an-object-">Deeply set a value of an object.</h3><p>If you need to deeply set a value of an object, we can do so using the setDeep method. This will create the path even
+though it&apos;s not already set.</p>
+<pre><code><code class="source-code prettyprint">let myObject = {};
+
+helpers.setDeep(myObject, &quot;set.deeply.nested.values&quot;, &quot;myValue&quot;);
+
+// myObject.set.deeply.nested.values = &quot;myValue&quot;;
+
+// Now it should look like this:
+myObject = { set: { deeply: { nested: { values: &quot;myValue&quot; }}}};</code>
+</code></pre><h3 id="call-a-function-if-it--39-s-a-function">Call a function if it&apos;s a function</h3><p>Sometimes in projects we need to call functions if they are indeed functions. For example, in a React project
+sometimes we have props that are optional. These props can contain functions. If that is indeed the case,
+we would end up writing something like this:</p>
+<pre><code><code class="source-code prettyprint">if (typeof myfunc === &quot;function&quot;) {
+    myfunc(...)
+} </code>
+</code></pre><p>Well, we think even the one-liner solution of this sucks. So we created better:</p>
+<pre><code><code class="source-code prettyprint">const myFunction = function (a, b) {
+    return a + b;
+}
+
+ifFunc(myFunction, 1, 2) // should return 3;</code>
+</code></pre><p>This will gracefully fail if the function is not set.</p>
+<h2 id="tests">Tests</h2><p>  <code>npm test</code></p>
+<h2 id="contributing">Contributing</h2><p>In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

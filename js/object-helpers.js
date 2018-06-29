@@ -1,10 +1,21 @@
 
-exports.accessDeep =  function  (p, o) {
-    if (typeof p === "string") {
-        p = p.split(".");
+/**
+ * @function accessDeep
+ *
+ * Safely access deeply nested values in an object. If the path to the
+ * value is not valid, the method will gracefully return null.
+ *
+ * @param {array} path - the array representation of the path to access.
+ * @param {object} obj - the object who's value you are trying to access.
+ *
+ * @return {null | any} will return null on path not found, or the value found.
+ */
+exports.accessDeep =  function  (path, obj) {
+    if (typeof path === "string") {
+        path = path.split(".");
     }
 
-    return p.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, o);
+    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);
 };
 
 exports.mapObj = function  (obj, callback) {

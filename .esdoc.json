@@ -1,0 +1,18 @@
+{
+  "source": "./js/",
+  "destination": "./docs",
+  "plugins": [
+    {"name": "esdoc-node"},
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "test": {
+          "source": "./test/",
+          "interfaces": ["describe", "it", "context", "suite", "test"],
+          "includes": ["(spec|Spec|test|Test)\\.js$"],
+          "excludes": ["\\.config\\.js$"]
+        }
+      }
+    }
+  ]
+}

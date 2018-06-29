@@ -1,0 +1,17 @@
+{
+  "coverage": "20%",
+  "expectCount": 5,
+  "actualCount": 1,
+  "files": {
+    "js/object-helpers.js": {
+      "expectCount": 5,
+      "actualCount": 1,
+      "undocumentLines": [
+        21,
+        30,
+        58,
+        64
+      ]
+    }
+  }
+}

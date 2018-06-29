@@ -1,0 +1,806 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "js/object-helpers.js",
+    "content": "\n/**\n * @function accessDeep\n *\n * Safely access deeply nested values in an object. If the path to the\n * value is not valid, the method will gracefully return null.\n *\n * @param {array} path - the array representation of the path to access.\n * @param {object} obj - the object who's value you are trying to access.\n *\n * @return {null | any} will return null on path not found, or the value found.\n */\nexports.accessDeep =  function  (path, obj) {\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);\n};\n\nexports.mapObj = function  (obj, callback) {\n    return Object.keys(obj).map(function (key) {\n        const returning = callback(obj[key], key);\n        if(returning !== false){\n            return returning;\n        }\n    });\n};\n\nexports.setDeep = function  (obj, path, value, setrecursively = false) {\n    let level = 0;\n\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    level = 0;\n\n    path.reduce((a, b)=>{\n        level++;\n\n        if (setrecursively && typeof a[b] === \"undefined\" && level !== path.length){\n            a[b] = {};\n            return a[b];\n        }\n\n        if (level === path.length){\n            a[b] = value;\n            return value;\n        } else {\n            return a[b];\n        }\n    }, obj);\n    return obj;\n};\n\n\nexports.ifFunc = function  (func, ...args){\n    if (typeof func === \"function\") {\n        return func(...args);\n    }\n};\n\nexports.arrayChunks = function (arr, len){\n    let chunks = [],\n        i = 0,\n        n = arr.length;\n\n    while (i < n) {\n        chunks.push(arr.slice(i, i += len));\n    }\n\n    return chunks;\n};",
+    "static": true,
+    "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/js/object-helpers.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "accessDeep",
+    "memberof": "js/object-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/object-helpers.js~accessDeep",
+    "access": "public",
+    "export": true,
+    "importPath": "project-helpers/js/object-helpers.js",
+    "importStyle": "{accessDeep}",
+    "description": "",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "accessDeep\n\nSafely access deeply nested values in an object. If the path to the\nvalue is not valid, the method will gracefully return null."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "the array representation of the path to access."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "the object who's value you are trying to access."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "null ",
+        " any"
+      ],
+      "spread": false,
+      "description": "will return null on path not found, or the value found."
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "mapObj",
+    "memberof": "js/object-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/object-helpers.js~mapObj",
+    "access": "public",
+    "export": true,
+    "importPath": "project-helpers/js/object-helpers.js",
+    "importStyle": "{mapObj}",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "callback",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "setDeep",
+    "memberof": "js/object-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/object-helpers.js~setDeep",
+    "access": "public",
+    "export": true,
+    "importPath": "project-helpers/js/object-helpers.js",
+    "importStyle": "{setDeep}",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "setrecursively",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "ifFunc",
+    "memberof": "js/object-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/object-helpers.js~ifFunc",
+    "access": "public",
+    "export": true,
+    "importPath": "project-helpers/js/object-helpers.js",
+    "importStyle": "{ifFunc}",
+    "description": null,
+    "lineNumber": 58,
+    "undocument": true,
+    "params": [
+      {
+        "name": "func",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "arrayChunks",
+    "memberof": "js/object-helpers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/object-helpers.js~arrayChunks",
+    "access": "public",
+    "export": true,
+    "importPath": "project-helpers/js/object-helpers.js",
+    "importStyle": "{arrayChunks}",
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "params": [
+      {
+        "name": "arr",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "len",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "Project Helpers\n=========\n\nTiny library with some fun uses. Honestly, this is just my first NPM package, so more of a test for me really. But everything should work fine.\n\n## Installation\n\n  `npm install project-helpers`\n\n## Usage\n\n    import {helpers, mapObj, setDeep, ifFunc, arrayChunks} from \"project-helpers\"\n\n### Group an array into chunks of arrays.\n\nThis method is good for creating grids and any other things that require an array to be sorted\ninto chunks.\n\n    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n    \n    const resulta = arrayChunks(testArray, 3);\n    const resultb = arrayChunks(testArray, 4);\n    \n    // resulta is: [[1,2,3], [4, 5, 6], [7, 8, 9]]\n    // resultb is: [[1,2,3, 4], [5, 6, 7, 8], [9]]\n\n### Access deeply nested values from an object\n\nSometimes we just need to reach a bit deeper than we'd like but are unsure if the pathway is even set.\n\nUse this method to safely access deeply nested values.\n\n    const deepObject = {layer_one: {layer_two: {layer_three: { worked: \"worked\"}}}};\n    \n    const result = accessDeep(\"layer_one.layer_two.layer_three.worked\", deepObject);\n  \n  \n  `result` should be `\"worked\"`\n\n### Map an object like you would an array\n\nDo you need to iterate through an object's values? Here you go. You're welcome:\n\n    const objectMap = {\n            one: 1,\n            two: 2,\n            three: 3\n        };\n        \n    const result = mapObj(objectMap, function (val) {\n                    return val;\n                });\n\n  `result` should be `[1, 2, 3]`\n  \n### Deeply set a value of an object.\n\nIf you need to deeply set a value of an object, we can do so using the setDeep method. This will create the path even\nthough it's not already set.\n\n    let myObject = {};\n    \n    helpers.setDeep(myObject, \"set.deeply.nested.values\", \"myValue\");\n    \n    // myObject.set.deeply.nested.values = \"myValue\";\n    \n    // Now it should look like this:\n    myObject = { set: { deeply: { nested: { values: \"myValue\" }}}};\n    \n### Call a function if it's a function\n\nSometimes in projects we need to call functions if they are indeed functions. For example, in a React project\nsometimes we have props that are optional. These props can contain functions. If that is indeed the case,\nwe would end up writing something like this:\n\n    if (typeof myfunc === \"function\") {\n        myfunc(...)\n    } \n\nWell, we think even the one-liner solution of this sucks. So we created better:\n\n    const myFunction = function (a, b) {\n        return a + b;\n    }\n\n    ifFunc(myFunction, 1, 2) // should return 3;\n    \nThis will gracefully fail if the function is not set.\n\n## Tests\n\n  `npm test`\n\n## Contributing\n\nIn lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.",
+    "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"project-helpers\",\n  \"version\": \"0.2.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"mocha --reporter spec\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/phillt/project-helpers.git\"\n  },\n  \"author\": \"Felipe Tadeo <contact@felipetadeo.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/phillt/project-helpers/issues\"\n  },\n  \"homepage\": \"https://github.com/phillt/project-helpers#readme\",\n  \"dependencies\": {\n    \"esdoc-node\": \"^1.0.3\",\n    \"react\": \"^16.4.1\"\n  },\n  \"devDependencies\": {\n    \"chai\": \"^4.1.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\"\n  }\n}\n",
+    "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

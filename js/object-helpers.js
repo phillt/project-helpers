@@ -1,9 +1,7 @@
 
 /**
- * @function accessDeep
- *
- * Safely access deeply nested values in an object. If the path to the
- * value is not valid, the method will gracefully return null.
+ * Safely access deeply nested values in an object. If the path to the value is not valid,
+ * the method will gracefully return null.
  *
  * @param {array} path - the array representation of the path to access.
  * @param {object} obj - the object who's value you are trying to access.
@@ -20,10 +18,8 @@ exports.accessDeep =  function  (path, obj) {
 
 
 /**
- * @function mapObj
- *
- * The mapObj() method creates a new array with the results of calling a provided function on
- * every element in the calling object.
+ * The mapObj() method creates a new array with the results of calling a provided function
+ * on every element in the calling object.
  *
  * @param {object} obj - The object to map.
  * @param {function} callback - The function to call per iterated value.
@@ -97,8 +93,6 @@ exports.ifFunc = function  (func, ...args){
 };
 
 /**
- * @function arrayChunks
- *
  * Group an array's values into subgroups.
  *
  * @param {array} arr - The target array.

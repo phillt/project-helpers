@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "js/object-helpers.js",
-    "content": "\n/**\n * @function accessDeep\n *\n * Safely access deeply nested values in an object. If the path to the\n * value is not valid, the method will gracefully return null.\n *\n * @param {array} path - the array representation of the path to access.\n * @param {object} obj - the object who's value you are trying to access.\n *\n * @return {null | any} will return null on path not found, or the value found.\n */\nexports.accessDeep =  function  (path, obj) {\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);\n};\n\n\n/**\n * @function mapObj\n *\n * The mapObj() method creates a new array with the results of calling a provided function on\n * every element in the calling object.\n *\n * @param {object} obj - The object to map.\n * @param {function} callback - The function to call per iterated value.\n * @returns {array} returns an array with the values of each returned value in the callback.\n */\nexports.mapObj = function  (obj, callback) {\n    return Object.keys(obj).map(function (key) {\n        const returning = callback(obj[key], key);\n        if(returning !== false){\n            return returning;\n        }\n    });\n};\n/**\n * Callback for mapObj\n *\n * The result of this will be added to the array.\n *\n * @callback mapObj\n * @param {any} arg[1] - The value of the current object value being iterated through.\n * @param {string} arg[2] - The key of the current object value being iterated through.\n */\n\n/**\n * Deeply nest and set a value in an object.\n *\n * @param {object} obj - The target object\n * @param {array | string } path - The path where the value should be nested and set.\n * @param {any} value - The value to set\n * @param {boolean} setRecursively - Should create path if the path does not exist.\n * @returns {object} Returns the new object for reference purposes.\n */\nexports.setDeep = function  (obj, path, value, setRecursively = false) {\n    let level = 0;\n\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    level = 0;\n\n    path.reduce((a, b)=>{\n        level++;\n\n        if (setRecursively && typeof a[b] === \"undefined\" && level !== path.length){\n            a[b] = {};\n            return a[b];\n        }\n\n        if (level === path.length){\n            a[b] = value;\n            return value;\n        } else {\n            return a[b];\n        }\n    }, obj);\n    return obj;\n};\n\n/**\n * Quickly call a function or fail gracefully if it does not exist.\n *\n * @param {function} func - The function to try to call.\n * @param {args} args - The would-be arguments of the function.\n * @returns {any} returns whatever the function returns.\n */\nexports.ifFunc = function  (func, ...args){\n    if (typeof func === \"function\") {\n        return func(...args);\n    }\n};\n\n/**\n * @function arrayChunks\n *\n * Group an array's values into subgroups.\n *\n * @param {array} arr - The target array.\n * @param {number} len - The length of the chunks.\n * @returns {array} A two-dimensional segmented array.\n */\nexports.arrayChunks = function (arr, len){\n    let chunks = [],\n        i = 0,\n        n = arr.length;\n\n    while (i < n) {\n        chunks.push(arr.slice(i, i += len));\n    }\n\n    return chunks;\n};",
+    "content": "\n/**\n * Safely access deeply nested values in an object. If the path to the value is not valid,\n * the method will gracefully return null.\n *\n * @param {array} path - the array representation of the path to access.\n * @param {object} obj - the object who's value you are trying to access.\n *\n * @return {null | any} will return null on path not found, or the value found.\n */\nexports.accessDeep =  function  (path, obj) {\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    return path.reduce(function (xs, x) { return (xs && xs[x]) ? xs[x] : null;}, obj);\n};\n\n\n/**\n * The mapObj() method creates a new array with the results of calling a provided function\n * on every element in the calling object.\n *\n * @param {object} obj - The object to map.\n * @param {function} callback - The function to call per iterated value.\n * @returns {array} returns an array with the values of each returned value in the callback.\n */\nexports.mapObj = function  (obj, callback) {\n    return Object.keys(obj).map(function (key) {\n        const returning = callback(obj[key], key);\n        if(returning !== false){\n            return returning;\n        }\n    });\n};\n/**\n * Callback for mapObj\n *\n * The result of this will be added to the array.\n *\n * @callback mapObj\n * @param {any} arg[1] - The value of the current object value being iterated through.\n * @param {string} arg[2] - The key of the current object value being iterated through.\n */\n\n/**\n * Deeply nest and set a value in an object.\n *\n * @param {object} obj - The target object\n * @param {array | string } path - The path where the value should be nested and set.\n * @param {any} value - The value to set\n * @param {boolean} setRecursively - Should create path if the path does not exist.\n * @returns {object} Returns the new object for reference purposes.\n */\nexports.setDeep = function  (obj, path, value, setRecursively = false) {\n    let level = 0;\n\n    if (typeof path === \"string\") {\n        path = path.split(\".\");\n    }\n\n    level = 0;\n\n    path.reduce((a, b)=>{\n        level++;\n\n        if (setRecursively && typeof a[b] === \"undefined\" && level !== path.length){\n            a[b] = {};\n            return a[b];\n        }\n\n        if (level === path.length){\n            a[b] = value;\n            return value;\n        } else {\n            return a[b];\n        }\n    }, obj);\n    return obj;\n};\n\n/**\n * Quickly call a function or fail gracefully if it does not exist.\n *\n * @param {function} func - The function to try to call.\n * @param {args} args - The would-be arguments of the function.\n * @returns {any} returns whatever the function returns.\n */\nexports.ifFunc = function  (func, ...args){\n    if (typeof func === \"function\") {\n        return func(...args);\n    }\n};\n\n/**\n * Group an array's values into subgroups.\n *\n * @param {array} arr - The target array.\n * @param {number} len - The length of the chunks.\n * @returns {array} A two-dimensional segmented array.\n */\nexports.arrayChunks = function (arr, len){\n    let chunks = [],\n        i = 0,\n        n = arr.length;\n\n    while (i < n) {\n        chunks.push(arr.slice(i, i += len));\n    }\n\n    return chunks;\n};",
     "static": true,
     "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/js/object-helpers.js",
     "access": "public",
@@ -587,14 +587,8 @@
     "export": true,
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{accessDeep}",
-    "description": "",
-    "lineNumber": 13,
-    "unknown": [
-      {
-        "tagName": "@function",
-        "tagValue": "accessDeep\n\nSafely access deeply nested values in an object. If the path to the\nvalue is not valid, the method will gracefully return null."
-      }
-    ],
+    "description": "Safely access deeply nested values in an object. If the path to the value is not valid,\nthe method will gracefully return null.",
+    "lineNumber": 11,
     "params": [
       {
         "nullable": null,
@@ -640,13 +634,9 @@
     "export": true,
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{mapObj}",
-    "description": "",
-    "lineNumber": 32,
+    "description": "The mapObj() method creates a new array with the results of calling a provided function\non every element in the calling object.",
+    "lineNumber": 28,
     "unknown": [
-      {
-        "tagName": "@function",
-        "tagValue": "mapObj\n\nThe mapObj() method creates a new array with the results of calling a provided function on\nevery element in the calling object."
-      },
       {
         "tagName": "@returns",
         "tagValue": "{array} returns an array with the values of each returned value in the callback."
@@ -697,7 +687,7 @@
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{setDeep}",
     "description": "Deeply nest and set a value in an object.",
-    "lineNumber": 59,
+    "lineNumber": 55,
     "unknown": [
       {
         "tagName": "@returns",
@@ -770,7 +760,7 @@
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{ifFunc}",
     "description": "Quickly call a function or fail gracefully if it does not exist.",
-    "lineNumber": 93,
+    "lineNumber": 89,
     "unknown": [
       {
         "tagName": "@returns",
@@ -821,13 +811,9 @@
     "export": true,
     "importPath": "project-helpers/js/object-helpers.js",
     "importStyle": "{arrayChunks}",
-    "description": "",
-    "lineNumber": 108,
+    "description": "Group an array's values into subgroups.",
+    "lineNumber": 102,
     "unknown": [
-      {
-        "tagName": "@function",
-        "tagValue": "arrayChunks\n\nGroup an array's values into subgroups."
-      },
       {
         "tagName": "@returns",
         "tagValue": "{array} A two-dimensional segmented array."
@@ -874,7 +860,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"project-helpers\",\n  \"version\": \"0.2.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"mocha --reporter spec\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/phillt/project-helpers.git\"\n  },\n  \"author\": \"Felipe Tadeo <contact@felipetadeo.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/phillt/project-helpers/issues\"\n  },\n  \"homepage\": \"https://phillt.github.io/project-helpers/\",\n  \"dependencies\": {\n    \"esdoc-node\": \"^1.0.3\",\n    \"react\": \"^16.4.1\"\n  },\n  \"devDependencies\": {\n    \"chai\": \"^4.1.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"project-helpers\",\n  \"version\": \"0.3.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"mocha --reporter spec\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/phillt/project-helpers.git\"\n  },\n  \"author\": \"Felipe Tadeo <contact@felipetadeo.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/phillt/project-helpers/issues\"\n  },\n  \"homepage\": \"https://phillt.github.io/project-helpers/\",\n  \"dependencies\": {\n    \"esdoc-node\": \"^1.0.3\",\n    \"react\": \"^16.4.1\"\n  },\n  \"devDependencies\": {\n    \"chai\": \"^4.1.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\"\n  }\n}\n",
     "longname": "/Users/philllware/Projects/sparrowlogic/project-helpers/package.json",
     "name": "package.json",
     "static": true,

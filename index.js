@@ -1,4 +1,4 @@
 'use strict';
-var helpers = require("./js/object-helpers");
+var helpers = require("./dist/js/object-helpers");
 
 module.exports =  helpers;
